@@ -25,6 +25,9 @@ Diseñado para practicar y perfeccionar **validaciones, métodos, bucles** y red
 - [Visual Studio Community](https://visualstudio.microsoft.com/es/vs/community/)
 - O Visual Studio Code con extensión C#
 
+⁉️ ¿Cómo encontrar la carpeta donde se aloja el código?
+- En carpeta llamada "Ejercicios_Solo" deslizas hacia abajo.
+- El archivo llamado "Program.cs" das doble click y aparece el código.
 
 ▶️ Cómo ejecutar
 

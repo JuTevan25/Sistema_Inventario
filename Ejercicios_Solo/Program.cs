@@ -1,16 +1,11 @@
 ﻿using System;
 
-namespace Sistema_Inventario // Note: actual namespace depends on the project name.
+namespace Sistema_Inventario 
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            //EJERCICIOS DE BUCLE WHILE CON MÉTODOS
-
-            // Cuando el método sea static string, es de mostrar mensajes o información relacionada con el método Main.
-            // Cuando el método sea static int, es de cálculos numéricos o validaciones que devuelven un número entero.
-            // Cuando el método sea static bool, es de validaciones que devuelven verdadero o falso.
 
             //Orden alfabético de variables
             bool opcionSalir = false;
@@ -40,20 +35,20 @@ namespace Sistema_Inventario // Note: actual namespace depends on the project na
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Contraseña incorrecta. Acceso denegado.");
-                return; // Termina la ejecución del programa si la contraseña es incorrecta.
+                return; 
             }
 
             Console.WriteLine("Bienvenido, por favor ingresa el nombre del producto.");
             nombreProducto = Console.ReadLine() ?? "";
             Console.Clear();
 
-            if (nombreProducto == "") // Detecta espacios vacíos 
+            if (nombreProducto == "") 
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Error: No se ingresó ningún texto.");
                 return;
             }
-            else if (!nombreProducto.All(c => char.IsLetter(c) || c == ' ')) // Permite letras con espacios.
+            else if (!nombreProducto.All(c => char.IsLetter(c) || c == ' ')) 
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Error: Solo se permiten letras y espacios.");
@@ -78,7 +73,7 @@ namespace Sistema_Inventario // Note: actual namespace depends on the project na
 
             if (validarCodigo <= 0 || validarCodigo >= 100)
             {
-                return; // Termina la ejecución del programa si el código no es válido.
+                return; 
             }
 
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -137,7 +132,7 @@ namespace Sistema_Inventario // Note: actual namespace depends on the project na
 
                 if (!opcionSalir)
                     {
-                        break; // Sale del bucle si el usuario no desea actualizar el precio.
+                        break; 
                 }
 
             }
@@ -159,18 +154,18 @@ namespace Sistema_Inventario // Note: actual namespace depends on the project na
 
         static int LeerCodigo(int validaCodigo)
         {
-            int codigoProducto = validaCodigo; // Asigna el valor del código ingresado a la variable local para su validación. 
+            int codigoProducto = validaCodigo; 
 
             if (codigoProducto <= 0 || codigoProducto >= 100)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Error: El código del producto debe estar en el rango permitido 1-99");
                 Console.ResetColor();
-                return 0; // Devuelve 0 para indicar que el código no es válido.
+                return 0; 
             }
             else
             {
-                return validaCodigo; // Devuelve el código del producto si es válido, o 0 si no lo es.
+                return validaCodigo; 
             }
         }
 
